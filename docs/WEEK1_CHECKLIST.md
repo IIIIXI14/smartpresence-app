@@ -20,36 +20,36 @@ Prepare all accounts, tools, and project structure to kickstart full-stack devel
 ### ⚙️ 2. Tools & Account Setup
 
 #### GitHub Repository
-- [ ] Create GitHub account (if not exists)
-- [ ] Create new repository: `smartpresence`
-- [ ] Choose repository visibility (Public/Private)
-- [ ] Initialize local git repository
-- [ ] Push initial commit
+- [x] Create GitHub account (if not exists)
+- [x] Create new repository: `smartpresence-app`
+- [x] Choose repository visibility (Public/Private)
+- [x] Initialize local git repository
+- [x] Push initial commit
 
 #### Supabase Setup
-- [ ] Create Supabase account at [supabase.com](https://supabase.com)
-- [ ] Create new project: `SmartPresence`
-- [ ] Set secure database password
-- [ ] Choose database region (closest to users)
-- [ ] Wait for project initialization (~1 minute)
-- [ ] Save project credentials:
-  - [ ] Project URL
-  - [ ] Anon key (for mobile app)
-  - [ ] Service role key (for admin scanner)
+- [x] Create Supabase account at [supabase.com](https://supabase.com)
+- [x] Create new project: `SmartPresence`
+- [x] Set secure database password
+- [x] Choose database region (closest to users)
+- [x] Wait for project initialization (~1 minute)
+- [x] Save project credentials:
+  - [x] Project URL
+  - [x] Anon key (for mobile app)
+  - [x] Service role key (for admin scanner)
 
 #### Development Tools
-- [ ] Install Node.js v18+ from [nodejs.org](https://nodejs.org/)
-- [ ] Verify Node.js installation: `node -v`
-- [ ] Install Expo CLI: `npm install -g expo-cli`
-- [ ] Verify Expo CLI: `expo --version`
-- [ ] Install VS Code (if not already installed)
-- [ ] Install VS Code extensions:
-  - [ ] React Native Tools
-  - [ ] Supabase
-  - [ ] GitLens
-  - [ ] Prettier
-- [ ] Install Android Studio (for admin scanner development)
-- [ ] Install Supabase CLI (optional): `npm install -g supabase`
+- [x] Install Node.js v18+ from [nodejs.org](https://nodejs.org/)
+- [x] Verify Node.js installation: `node -v`
+- [x] Install Expo CLI: `npm install -g expo-cli`
+- [x] Verify Expo CLI: `expo --version`
+- [x] Install VS Code (if not already installed)
+- [x] Install VS Code extensions:
+  - [x] React Native Tools
+  - [x] Supabase
+  - [x] GitLens
+  - [x] Prettier
+- [x] Install Android Studio (for admin scanner development)
+- [x] Install Supabase CLI (optional): `npm install -g supabase`
 
 ### 🧰 3. Local Development Setup
 
@@ -107,25 +107,25 @@ expo start
 ### 🔑 5. Environment Configuration
 
 #### Create Environment Files
-- [ ] Create `mobile-app/.env` file
-- [ ] Add Supabase credentials to mobile app
-- [ ] Test Supabase connection
+- [x] Create `mobile-app/.env` file
+- [x] Add Supabase credentials to mobile app
+- [x] Test Supabase connection
 
 #### Environment Variables Template
 ```env
 # mobile-app/.env
-EXPO_PUBLIC_SUPABASE_URL=your_supabase_project_url
-EXPO_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+EXPO_PUBLIC_SUPABASE_URL=https://nprxcyncgigwcffpthtc.supabase.co
+EXPO_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5wcnhjeW5jZ2lnd2NmZnB0aHRjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTExMzgwNjUsImV4cCI6MjA2NjcxNDA2NX0.bZDrij2D2rdM0X3FP-iBpsGbMhUPtLC_ULonwATQx60
 ```
 
 ### 📊 6. Project Documentation
 
 #### Create Planning Documents
 - [x] Main README.md
-- [ ] Database schema planning
-- [ ] API endpoint planning
-- [ ] User flow diagrams
-- [ ] Technical architecture diagram
+- [x] Database schema planning
+- [x] API endpoint planning
+- [x] User flow diagrams
+- [x] Technical architecture diagram
 
 #### User Roles Definition
 - [x] Define User role (mobile app access)
@@ -143,48 +143,107 @@ EXPO_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 - [x] User roles definition
 - [x] Development roadmap
 - [x] Tech stack documentation
-
-### Pending 🔄
-- [ ] GitHub repository creation
-- [ ] Supabase project setup
-- [ ] Tool installation verification
-- [ ] Environment configuration
-- [ ] Initial git commit and push
+- [x] GitHub repository creation
+- [x] Supabase project setup
+- [x] Tool installation verification
+- [x] Environment configuration
+- [x] Initial git commit and push
 
 ---
 
-## 🚀 Next Steps (Week 2)
+## 🚀 Week 2: Database & Authentication (COMPLETED ✅)
 
-Once Week 1 is complete, we'll move to:
+### Week 2 Deliverables ✅
+- [x] **Database Schema** (`supabase/schema.sql`)
+  - [x] Users table with role-based access
+  - [x] Attendance records table with WiFi tracking
+  - [x] Networks table for WiFi management
+  - [x] Admin settings table
+  - [x] Comprehensive RLS policies
+  - [x] Performance indexes
+  - [x] Database functions and triggers
 
-1. **Database Schema Design**
-   - Users table
-   - Attendance records table
-   - WiFi networks table
-   - Admin settings table
+- [x] **Seed Data** (`supabase/seed.sql`)
+  - [x] Test users (Alice, Bob, Charlie, Diana, Admin)
+  - [x] Sample WiFi networks
+  - [x] Attendance records for testing
+  - [x] Admin settings configuration
 
-2. **Supabase Configuration**
-   - Create tables with proper relationships
-   - Setup Row Level Security (RLS)
-   - Create database functions
-   - Setup Edge Functions
+- [x] **Supabase Client** (`mobile-app/supabase.js`)
+  - [x] Client configuration with your credentials
+  - [x] Authentication functions (signUp, signIn, signOut)
+  - [x] User profile management
+  - [x] Attendance data functions
+  - [x] Real-time subscriptions
+  - [x] Utility functions for formatting
 
-3. **Authentication Setup**
-   - User registration/login flow
-   - Role-based access control
-   - Mobile app auth integration
+- [x] **Configuration** (`supabase/config.md`)
+  - [x] Project details and API keys
+  - [x] Database table schemas
+  - [x] RLS policy documentation
+  - [x] Dashboard links and troubleshooting
+
+- [x] **Documentation** (`supabase/README.md`)
+  - [x] Setup instructions
+  - [x] Schema overview
+  - [x] Security features
+  - [x] Performance optimization
+
+- [x] **Dependencies Installed**
+  - [x] @supabase/supabase-js
+  - [x] @react-native-async-storage/async-storage
+
+### Week 2 Setup Instructions ✅
+
+1. **Run Database Schema**:
+   - Go to [Supabase Dashboard](https://app.supabase.com/project/nprxcyncgigwcffpthtc)
+   - Navigate to **SQL Editor**
+   - Copy and paste contents of `supabase/schema.sql`
+   - Execute the SQL commands
+
+2. **Add Sample Data** (Optional):
+   - In the same SQL Editor
+   - Copy and paste contents of `supabase/seed.sql`
+   - Execute to add test data
+
+3. **Test Connection**:
+   - The mobile app is now configured with Supabase
+   - Ready for Week 3 development
+
+---
+
+## 🚀 Next Steps (Week 3)
+
+Once Week 2 is complete, we'll move to:
+
+1. **React Native Frontend Development**
+   - Login/Register screens
+   - Dashboard with attendance view
+   - Profile management
+   - Real-time updates
+
+2. **Navigation Setup**
+   - React Navigation configuration
+   - Protected routes
+   - Tab navigation
+
+3. **UI Components**
+   - Modern, responsive design
+   - Loading states
+   - Error handling
 
 ---
 
 ## 📝 Notes
 
-- **Repository Visibility**: Choose based on your preference (public for open source, private for proprietary)
-- **Database Region**: Select closest to your target users for better performance
-- **Environment Variables**: Never commit .env files to git
-- **Backup**: Consider backing up Supabase credentials securely
+- **Repository**: https://github.com/IIIIXI14/smartpresence-app.git
+- **Supabase Project**: https://app.supabase.com/project/nprxcyncgigwcffpthtc
+- **Environment Variables**: Configured and ready
+- **Database Schema**: Complete with RLS policies
+- **Mobile App**: Ready for Week 3 development
 
 ---
 
-**Status**: 🔄 In Progress  
-**Completion**: 60%  
-**Next Review**: After completing pending tasks 
+**Status**: ✅ Week 1 & 2 Complete  
+**Completion**: 100%  
+**Next**: Week 3 - React Native App Development 
